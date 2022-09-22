@@ -10,14 +10,6 @@ const Listings = () => {
       .then((res) => setListings(res.listings));
   }, []);
 
-  //   {eventInfo.map((item,index) => (
-  //     <tr key={index}>
-  //       <td>{item.eventName}</td>
-  //        <td>{item.startDate}</td>
-  //        <td>{item.endDate}</td>
-  //    </tr>
-  // ))
-  // }
 
   const renderListing = (listing) => {
     return (
@@ -38,15 +30,6 @@ const Listings = () => {
           </span>
         </div>
       </div>
-      //   <div className="listingCard">
-      //     <div style={{ position: "relative", height: "200px", width: "100%" }}>
-      //       <img alt={item?.title} src={item?.image} height="200px" />
-      //     </div>
-      //     {`${item?.name}`}
-      //     {(`${item?.city}`, `${item?.state}`)}
-      //     {`${item?.price}`}
-      //       {`${item?.floors} floors``${item?.rooms} rooms``${item?.sqft} sqft`}
-      //   </div>
     );
   };
 
