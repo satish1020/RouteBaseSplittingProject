@@ -10,7 +10,6 @@ const Listings = () => {
       .then((res) => setListings(res.listings));
   }, []);
 
-
   const renderListing = (listing) => {
     return (
       <div className="listingCard">
@@ -35,9 +34,11 @@ const Listings = () => {
 
   return (
     <div className="listingsContainer">
-      {listings.length>0 &&  listings.map((listing) => (
-        <div key={listing.id}>{renderListing(listing)}</div>
-      ))}
+      <h3>Houses</h3>
+      {listings.length > 0 &&
+        listings.map((listing) => (
+          <div key={listing.id}>{renderListing(listing)}</div>
+        ))}
     </div>
   );
 };

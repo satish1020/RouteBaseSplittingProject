@@ -19,6 +19,7 @@
 }
 
 .listingImage{
-    width: 300px;
-    height: 200px;
+    position: relative;
+     height: 200px;
+      width: "100%"; 
 }

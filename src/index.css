@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  flex-flow: row wrap;
+}
+
+nav ul li {
+  margin: 0 0.1em;
+  color: black;
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+}
+
+nav ul li a:hover {
+  background-color: #37373e;
+}
