@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Contact from "./Components/Contact";
+import Contact from "./Components/ReducerComponent";
 import About from "./Components/About";
 import reportWebVitals from "./reportWebVitals";
 import { Route, Routes, BrowserRouter, Link, Outlet } from "react-router-dom";
