@@ -2,8 +2,8 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Contact from "./Components/ReducerComponent";
-import About from "./Components/About";
+import ReducerComponent from "./Components/ReducerComponent";
+import Context from "./Components/ContextComponent";
 import reportWebVitals from "./reportWebVitals";
 import { Route, Routes, BrowserRouter, Link, Outlet } from "react-router-dom";
 
@@ -20,10 +20,10 @@ const renderNav = () => {
         </h1>
         <ul>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/context">Context</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/reducer">Reducer</Link>
           </li>
         </ul>
       </nav>
@@ -46,19 +46,18 @@ root.render(
             }
           />
           <Route
-            path="/about"
+            path="/context"
             element={
               <Suspense fallback={<div />}>
-                <About />
+                <Context />
               </Suspense>
             }
           />
           <Route
-            path="/contact"
+            path="/reducer"
             element={
               <Suspense fallback={<div />}>
-                {" "}
-                <Contact />{" "}
+                <ReducerComponent />
               </Suspense>
             }
           />

@@ -9,7 +9,7 @@ const reducer = (state, action) => {
     case "INCREMENT_R":
       return Object.assign({}, state, { r: limitRGB(state?.r + step) });
     case "DECREMENT_R":
-      return Object.assign({}, state, { r: state?.r - step });
+      return Object.assign({}, state, { r: limitRGB(state?.r - step )});
     case "INCREMENT_G":
       return Object.assign({}, state, { g: limitRGB(state.g + step) });
     case "DECREMENT_G":
@@ -23,9 +23,18 @@ const reducer = (state, action) => {
   }
 };
 const ReducerComponent = () => {
+  // const [{ r, g, b }, dispatch] = useReducer(reducer, { r: 0, g: 0, b: 0 });
+
   const [{ r, g, b }, dispatch] = useReducer(reducer, { r: 0, g: 0, b: 0 });
   return (
-    <div style={{display: 'flex', alignItems: 'center', justifyContent:'center', flexFlow: 'column'}}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexFlow: "column",
+      }}
+    >
       <h1 style={{ color: `rgb(${r}, ${g}, ${b})` }}>useReducer Example</h1>
       <div>
         <span>Red</span>

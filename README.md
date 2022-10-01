@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+// context is an alternative to props drilling.
+
+//  we put some application level state data into user context like user info , 
+
+For example in netflix account, we have netflix user account, we have to set my settings which reads from user accounts. We have to set streaming preferences which comes from user account.
+If we have to upgrade the plan or down grade the plan we have to do it from user account. So this is a universal application state.
+this is wonderful candidate to put into the context.
+
+// if for example a counter which we are kind of lazy to pass around is not a great candidate to put in a context. 
+// we don't put a state which is a view state in context.
+
+// if we use two hook useContext and useReducer, we kind of get most of the Redux library usage.
